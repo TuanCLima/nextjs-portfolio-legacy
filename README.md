@@ -1,38 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Portfolio — Legacy
 
-## Getting Started
+An earlier version of my personal portfolio, built with Next.js 13, React 18 and Material UI. Retained as a record of the implementation and design work.
 
-First, run the development server:
+**My current portfolio is [tuanlima.netlify.app](https://tuanlima.netlify.app/), with source in [portfolio](https://github.com/TuanCLima/portfolio).** The résumé and work history checked into this older repository are historical.
+
+## Implementation
+
+- Profile, professional experience and education sections.
+- Reusable React components and data modules.
+- A canvas-based animated background.
+- CSS Modules, Material UI and Font Awesome assets.
+
+## Run locally
 
 ```bash
+git clone https://github.com/TuanCLima/nextjs-portfolio-legacy.git
+cd nextjs-portfolio-legacy
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [localhost:3000](http://localhost:3000). Use Node.js 18 for the original toolchain in an isolated environment. This historical version has not been migrated to a current Next.js release.
 
-You can start editing the page by modifying `app/page.jsx`. The page auto-updates as you edit the file.
+## Available commands
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+npm run lint
+npm run build
+npm start
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+`npm start` serves a completed production build. There is no automated application-test suite.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Code map
 
-## Learn More
+- `src/app/components/`: portfolio sections and canvas background.
+- `src/app/data/`: experience and education entries.
+- `src/app/page.jsx`: page composition.
+- `public/`: images, historical résumé and third-party icon assets.
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+No project-wide open-source license is declared. Font Awesome has its own [license](public/fontawesome/LICENSE.txt).
